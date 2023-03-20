@@ -162,7 +162,7 @@
                 </h3>
                 <br>
                 <video id="v0" width="100%" autoplay loop muted controls>
-                    <source src="img/teaser.mp4" type="video/mp4"/>
+                    <source src="img/demo_video_v8_task.mp4" type="video/mp4"/>
                 </video>
                 <p class="text-justify">
                     Neural Radiance Field (NeRF) significantly degrades when only a limited number of views are available. To complement the lack of 3D information, depth-based models, such as DSNeRF and MonoSDF, explicitly assume the availability of accurate depth maps of multiple views. They linearly scale the accurate depth maps as supervision to guide the predicted depth of few-shot NeRFs. However, accurate depth maps are difficult and expensive to capture due to wide-range depth distances in the wild. 
@@ -171,6 +171,22 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <br>
+                <video id="v0" width="100%" autoplay loop muted controls>
+                    <source src="img/demo_video_v8_motivation.mp4" type="video/mp4"/>
+                </video>
+                <p class="text-justify">
+                    Depth maps are coarse: (a) inconsistent 3D geometry; (b) and (c) time jittering; (d) scale-invariant error.
+               </p>
+            </div>
+        </div>
+    
+    
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -188,405 +204,6 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    HDRI Gallery
-                </h3>
-                <p>
-                    <u>
-                        Hover to view in VR mode. Click the text to open the full viewer and renderer.
-                    </u>
-                </p>
-                <table>
-                    <tbody>
-                    <tr style="display:table-row; text-align: center;">
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[closeup photo of concrete stair surrounded by white painted wall].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[closeup photo of concrete stair surrounded by white painted wall].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[photo of valley].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[photo of valley].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;" >
-                            <button class="named_button" value="closeup photo of concrete stair surrounded by white painted wall">closeup photo of concrete stair <br> surrounded by white painted wall</button>
-                        </td>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;">
-                            <button class="named_button" value="photo of valley">photo of valley</button>
-                        </td>
-                    </tr>
-
-
-                    <tr style="display:table-row; text-align: center;">
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[brown wooden hallway during night time].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[brown wooden hallway during night time].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[Audience, Auditorium, Conference].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[Audience, Auditorium, Conference].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;" >
-                            <button class="named_button" value="brown wooden hallway during night time">brown wooden hallway during night time</button>
-                        </td>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;">
-                            <button class="named_button" value="Audience, Auditorium, Conference">Audience, Auditorium, Conference</button>
-                        </td>
-                    </tr>
-
-
-                    <tr style="display:table-row; text-align: center;">
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[body of water surrounded with buildings].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[body of water surrounded with buildings].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[seashore during golden hour].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[seashore during golden hour].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;" >
-                            <button class="named_button" value="body of water surrounded with buildings">body of water surrounded with buildings</button>
-                        </td>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;">
-                            <button class="named_button" value="seashore during golden hour">seashore during golden hour</button>
-                        </td>
-                    </tr>
-                    
-
-                    <tr style="display:table-row; text-align: center;">
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[photo of orange chairs].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[photo of orange chairs].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[brown wooden chairs inside cathedral].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[brown wooden chairs inside cathedral].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;" >
-                            <button class="named_button" value="photo of orange chairs">photo of orange chairs</button>
-                        </td>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;">
-                            <button class="named_button" value="brown wooden chairs inside cathedral">brown wooden chairs inside cathedral</button>
-                        </td>
-                    </tr>
-
-
-                    <tr style="display:table-row; text-align: center;">
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[ocean waves crashing on shore under blue and white cloudy sky during daytime].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[ocean waves crashing on shore under blue and white cloudy sky during daytime].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[white bed linen with white pillow].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[white bed linen with white pillow].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;" >
-                            <button class="named_button" value="ocean waves crashing on shore under blue and white cloudy sky during daytime">ocean waves crashing on shore <br> under blue and white cloudy sky during daytime</button>
-                        </td>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;">
-                            <button class="named_button" value="white bed linen with white pillow">white bed linen with white pillow</button>
-                        </td>
-                    </tr>
-
-
-                    <tr style="display:table-row; text-align: center;">
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[brown canyon during sunset].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[brown canyon during sunset].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[gray concrete pathway with wall signages].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[gray concrete pathway with wall signages].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;" >
-                            <button class="named_button" value="brown canyon during sunset">brown canyon during sunset</button>
-                        </td>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;">
-                            <button class="named_button" value="gray concrete pathway with wall signages">gray concrete pathway with wall signages</button>
-                        </td>
-                    </tr>
-
-
-                    <tr style="display:table-row; text-align: center;">
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[landscape photography of mountain ranges under purple and pink skies].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[landscape photography of mountain ranges under purple and pink skies].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[blue and white hallway with lights turned on in the middle].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[blue and white hallway with lights turned on in the middle].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;" >
-                            <button class="named_button" value="landscape photography of mountain ranges under purple and pink skies">landscape photography of mountain <br> ranges under purple and pink skies</button>
-                        </td>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;">
-                            <button class="named_button" value="blue and white hallway with lights turned on in the middle">blue and white hallway with lights turned on in the middle</button>
-                        </td>
-                    </tr>
-
-
-                    <tr style="display:table-row; text-align: center;">
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[white ceramic sink beside white ceramic toilet bowl].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[white ceramic sink beside white ceramic toilet bowl].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[lined brown pew benches].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[lined brown pew benches].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;">
-                            <button class="named_button" value="white ceramic sink beside white ceramic toilet bowl">white ceramic sink beside white ceramic toilet bowl</button>
-                        </td>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;">
-                            <button class="named_button" value="lined brown pew benches">lined brown pew benches</button>
-                        </td>
-                    </tr>
-
-
-                    <tr style="display:table-row; text-align: center;">
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[brown house under stary night].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[brown house under stary night].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[blue and brown wooden counter].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[blue and brown wooden counter].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;" >
-                            <button class="named_button" value="brown house under stary night">brown house under stary night</button>
-                        </td>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;">
-                            <button class="named_button" value="blue and brown wooden counter">blue and brown wooden counter</button>
-                        </td>
-                    </tr>
-
-
-                    <tr style="display:table-row; text-align: center;">
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[road in the middle of grass covered field during day].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[road in the middle of grass covered field during day].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[green grass field with trees and mountains in the distance].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[green grass field with trees and mountains in the distance].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;" >
-                            <button class="named_button" value="road in the middle of grass covered field during day">road in the middle of grass covered field during day</button>
-                        </td>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;">
-                            <button class="named_button" value="green grass field with trees and mountains in the distance">green grass field with trees and mountains in the distance</button>
-                        </td>
-                    </tr>
-
-
-                    <tr style="display:table-row; text-align: center;">
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[green trees on brown rock formation on lake during daytime].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[green trees on brown rock formation on lake during daytime].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[concrete road between mountains].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[concrete road between mountains].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;" >
-                            <button class="named_button" value="green trees on brown rock formation on lake during daytime">green trees on brown rock formation on lake during daytime</button>
-                        </td>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;">
-                            <button class="named_button" value="concrete road between mountains">concrete road between mountains</button>
-                        </td>
-                    </tr>
-
-
-                    <tr style="display:table-row; text-align: center;">
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[road with falling leaves in between of trees].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[road with falling leaves in between of trees].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="show-hide-wrapper">
-                                <div class="show">
-                                    <img src="img/pano/full_[cityscape at night].png" width="100%">
-                                </div>
-                                <div class="hide_gif">
-                                    <img src="img/vr_gif/full_[cityscape at night].gif" width="100%">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;" >
-                            <button class="named_button" value="road with falling leaves in between of trees">road with falling leaves in between of trees</button>
-                        </td>
-                        <td style="text-align: center; padding-bottom: 3%; width: 50%;">
-                            <button class="named_button" value="cityscape at night">cityscape at night</button>
-                        </td>
-                    </tr>
-
-
-                </tbody></table>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
                     Video
                 </h3>
                 <div class="text-center">
@@ -597,6 +214,8 @@
             </div>
         </div>
 
+    
+    
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
