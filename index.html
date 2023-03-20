@@ -175,7 +175,7 @@
                     <source src="img/demo_video_v8_motivation.mp4" type="video/mp4"/>
                 </video>
                 <p class="text-justify">
-                    Depth maps are coarse: (a) inconsistent 3D geometry; (b) and (c) time jittering; (d) scale-invariant error.
+                    Depth maps are coarse: (a) inconsistent 3D geometry; (b) and (c) time jittering; (d) scale-invariant error. Directly scaling the coarse depth maps to a NeRF leads to inconsistent geometry against the expected depth of the NeRF. Instead of directly supervising a NeRF with coarse depth priors, we relax hard depth constraints and distill robust local depth ranking from the coarse depth maps to a NeRF such that the depth ranking of a NeRF is consistent with that of coarse depth. That is, we supervise a NeRF with relative depth instead of absolute depth.
                </p>
             </div>
         </div>
