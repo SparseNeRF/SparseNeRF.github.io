@@ -12,20 +12,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!--FACEBOOK-->
-    <meta property="og:image" content="https://frozenburning.github.io/projects/text2light/img/teaser.jpg">
+    <meta property="og:image" content="img/teaser.jpg">
     <meta property="og:image:type" content="image/jpg">
     <meta property="og:image:width" content="682">
     <meta property="og:image:height" content="682">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://frozenburning.github.io/projects/text2light"/>
-    <meta property="og:title" content="Text2Light" />
-    <meta property="og:description" content="Project page for Text2Light: Zero-Shot Text-Driven HDR Panorama Generation." />
+    <meta property="og:url" content="https://sparsenerf.github.io/"/>
+    <meta property="og:title" content="SparseNeRF" />
+    <meta property="og:description" content="Project page for SparseNeRF: Distilling Depth Ranking for Few-shot Novel View Synthesis." />
 
         <!--TWITTER-->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Text2Light" />
-    <meta name="twitter:description" content="Project page for Text2Light: Zero-Shot Text-Driven HDR Panorama Generation." />
-    <meta name="twitter:image" content="https://frozenburning.github.io/projects/text2light/img/teaser.jpg" />
+    <meta name="twitter:title" content="SparseNeRF" />
+    <meta name="twitter:description" content="Project page for SparseNeRF: Distilling Depth Ranking for Few-shot Novel View Synthesis." />
+    <meta name="twitter:image" content="img/teaser.jpg" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -81,9 +81,9 @@
     <div class="container" id="main" style="width: 100%; max-width: 1500px;">
         <div class="row">
             <h1 class="col-md-12 text-center">
-                <b>Text2Light</b>: Zero-Shot Text-Driven HDR Panorama Generation <br>
+                <b>SparseNeRF</b>: Distilling Depth Ranking for Few-shot Novel View Synthesis. <br>
                 <small>
-                    TOG 2022 (Proc. SIGGRAPH Asia)
+                    Technical Report, 2023
                 </small>
             </h1>
         </div>
@@ -91,13 +91,18 @@
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                     <li>
+                        <a href="https://wanggcong.github.io/">
+                            Guangcong Wang
+                        </a>
+                    </li>
+                    <li>
                         <a href="https://frozenburning.github.io">
                             Zhaoxi Chen
                         </a>
                     </li>
                     <li>
-                        <a href="https://wanggcong.github.io/">
-                            Guangcong Wang
+                        <a href="https://www.mmlab-ntu.com/person/ccloy/profile.html">
+                            Chen Change Loy
                         </a>
                     </li>
                     <li>
@@ -160,7 +165,8 @@
                     <source src="img/teaser.mp4" type="video/mp4"/>
                 </video>
                 <p class="text-justify">
-                    High-quality HDRIs (High Dynamic Range Images), typically HDR panoramas, are one of the most popular ways to create photorealistic lighting and 360-degree reflections of 3D scenes in graphics. Given the difficulty of capturing HDRIs, a versatile and controllable generative model is highly desired, where laymen users can intuitively control the generation process. However, existing state-of-the-art methods still struggle to synthesize high-quality panoramas for complex scenes. In this work, we propose a zero-shot text-driven framework, <strong>Text2Light</strong>, to generate 4K+ resolution HDRIs without paired training data. Given a free-form text as the description of the scene, we synthesize the corresponding HDRI with two dedicated steps: 1) text-driven panorama generation in low dynamic range (LDR) and low resolution (LR), and 2) super-resolution inverse tone mapping to scale up the LDR panorama both in resolution and dynamic range. Extensive experiments demonstrate the superior capability of Text2Light in generating high-quality HDR panoramas. In addition, we show the feasibility of our work in realistic rendering and immersive VR.
+                    Neural Radiance Field (NeRF) significantly degrades when only a limited number of views are available. To complement the lack of 3D information, depth-based models, such as DSNeRF and MonoSDF, explicitly assume the availability of accurate depth maps of multiple views. They linearly scale the accurate depth maps as supervision to guide the predicted depth of few-shot NeRFs. However, accurate depth maps are difficult and expensive to capture due to wide-range depth distances in the wild. 
+                    In this work, we present a new Sparse-view NeRF (\textbf{SparseNeRF}) framework that exploits depth priors from real-world inaccurate observations. The inaccurate depth observations are either from pre-trained depth models or coarse depth maps of consumer-level depth sensors. Since coarse depth maps are not strictly scaled to the ground-truth depth maps, we propose a simple yet effective constraint, a local depth ranking method, on NeRFs such that the expected depth ranking of the NeRF is consistent with that of the coarse depth maps in local patches. To preserve the spatial continuity of the estimated depth of NeRF, we further propose a spatial continuity constraint to encourage the consistency of the expected depth continuity of NeRF with coarse depth maps. Surprisingly, with simple depth ranking constraints, SparseNeRF outperforms all state-of-the-art few-shot NeRF methods (including depth-based models) on standard LLFF and DTU datasets. Moreover, we collect a new dataset NVS-RGBD that contains real-world depth maps from Azure Kinect, ZED 2, and iPhone 13 Pro. Extensive experiments on NVS-RGBD dataset also validate the superiority and generalizability of SparseNeRF.
                 </p>
             </div>
         </div>
@@ -174,7 +180,7 @@
                     <image src="img/framework.png" class="img-responsive" alt="scales">
                 </p>
                 <p class="text-justify">
-                    We decompose the generation process of HDR panorama into two stages. <strong>Stage I</strong> translates the input text to LDR panorama based on a dual-codebook discrete representation. First, the input text is mapped to the text embedding by the pre-trained CLIP model. Second, a text-conditioned global sampler learns to sample holistic semantics from the global codebook according to the input text. Then, a structure-aware local sampler synthesizes local patches and composites them accordingly. <strong>Stage II</strong> upscales the LDR result from Stage I based on structured latent codes as continuous representations. We propose a novel Super-Resolution Inverse Tone Mapping Operator (SR-iTMO) to simultaneously increase the spatial resolution and dynamic range of the panorama.
+                    Framework Overview. SparseNeRF consists of two streams, i.e., NeRF and depth prior distillation. As for NeRF, we use Mip-NeRF as the backbone. we use a NeRF reconstruction loss. As for depth prior distillation, we distill depth priors from a pre-trained depth model. Specifically, we propose a local depth ranking regularization and a spatial continuity regularization to distill robust depth priors from coarse depth maps.
                 </p>
             </div>
         </div>
